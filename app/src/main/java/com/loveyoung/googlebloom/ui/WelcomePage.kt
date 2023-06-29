@@ -1,5 +1,8 @@
 package com.loveyoung.googlebloom.ui
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -10,13 +13,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.loveyoung.googlebloom.LoginActivity
 import com.loveyoung.googlebloom.ui.theme.*
 
+private lateinit var mAct:Activity
 @Composable
-fun WelcomePage(){
+fun WelcomePage(act: Activity){
+    mAct = act
     Box(modifier = Modifier
         .fillMaxSize()
         .background(MaterialTheme.colors.background)
@@ -99,11 +106,16 @@ fun WelcomeButtons(){
         }
 
         Spacer(modifier = Modifier.height(24.dp))
-        TextButton(onClick = { /*TODO*/ }) {
+        TextButton(onClick = { goLogin(mAct) }) {
             Text(
                 text = "Log in",
                 style = MaterialTheme.typography.button,
                 color = MaterialTheme.colors.primary            )
         }
     }
+}
+
+fun goLogin(act: Activity){
+    val intent = Intent(act, LoginActivity::class.java)
+    act.startActivity(intent)
 }

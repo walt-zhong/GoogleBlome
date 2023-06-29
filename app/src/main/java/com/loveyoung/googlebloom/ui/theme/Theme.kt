@@ -1,6 +1,5 @@
 package com.loveyoung.googlebloom.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.shapes
 import androidx.compose.material.darkColors
@@ -69,7 +68,7 @@ fun GoogleBloomTheme(theme:BloomTheme = BloomTheme.LIGHT,content:@Composable ()-
     ) {
         MaterialTheme(colors = if (theme == BloomTheme.DARK)
             BloomDarkColorPalette else BloomLightColorPalette,
-        typography = bloomTypoGraphy,
+        typography = bloomTypoGraph,
         shapes = shapes,
         content = content,
         )
