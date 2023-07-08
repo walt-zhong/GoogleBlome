@@ -47,7 +47,7 @@ fun HomePage() {
 @Composable
 fun BottomBar() {
     BottomNavigation(
-        elevation= 16.dp,
+        elevation = 16.dp,
         modifier = Modifier
             .fillMaxWidth()
             .height(56.dp),
@@ -73,7 +73,6 @@ fun BottomBar() {
             )
         }
     }
-
 }
 
 @Composable
@@ -110,7 +109,6 @@ fun SearchBar() {
             )
         )
     }
-
 }
 
 @Composable
@@ -139,7 +137,6 @@ fun BloomRowBanner() {
             }
         }
     }
-
 }
 
 @Composable
@@ -147,23 +144,31 @@ fun BloomInfoList() {
     Column {
         Row(
             modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween) {
-            Text(text = "Design your home garden",
-            style = MaterialTheme.typography.h1,
-            color = MaterialTheme.colors.primary,
-            modifier = Modifier.paddingFromBaseline(top = 40.dp))
-            Icon(painterResource(id = R.drawable.ic_filter_list),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(
+                text = "Design your home garden",
+                style = MaterialTheme.typography.h1,
+                color = MaterialTheme.colors.primary,
+                modifier = Modifier.paddingFromBaseline(top = 40.dp)
+            )
+            Icon(
+                painterResource(id = R.drawable.ic_filter_list),
                 contentDescription = "filter",
-            modifier = Modifier
-                .padding(top = 24.dp)
-                .size(24.dp))
+                modifier = Modifier
+                    .padding(top = 24.dp)
+                    .size(24.dp)
+            )
         }
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        LazyColumn(modifier = Modifier.fillMaxWidth(), contentPadding = PaddingValues(bottom = 56.dp)){
-            items(bloomInfoList.size){
-                if (it != 0){
+        LazyColumn(
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = PaddingValues(bottom = 56.dp)
+        ) {
+            items(bloomInfoList.size) {
+                if (it != 0) {
                     Spacer(modifier = Modifier.height(8.dp))
                 }
 
@@ -184,7 +189,8 @@ fun PlantCard(plant: ImageItem) {
         Column {
             Image(
                 painterResource(
-                    id = plant.resID),
+                    id = plant.resID
+                ),
                 contentScale = ContentScale.Crop,
                 contentDescription = "image",
                 modifier = Modifier
