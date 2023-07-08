@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.loveyoung.googlebloom.base.TransparentSystemBars
 import com.loveyoung.googlebloom.ui.LoginPage
 import com.loveyoung.googlebloom.ui.WelcomePage
 import com.loveyoung.googlebloom.ui.theme.BloomTheme
@@ -37,31 +38,5 @@ class LoginActivity : ComponentActivity() {
                 LoginPage()
             }
         }
-    }
-}
-
-@Composable
-fun TransparentSystemBars(color: Color) {
-    val systemUiController = rememberSystemUiController()
-    val useDarkIcons = !isSystemInDarkTheme()
-    SideEffect {
-        systemUiController.setSystemBarsColor(
-            color = color,
-            darkIcons = useDarkIcons,
-            isNavigationBarContrastEnforced = false,
-        )
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    GoogleBloomTheme {
-        Greeting("Android")
     }
 }

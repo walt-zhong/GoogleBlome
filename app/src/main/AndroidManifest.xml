@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         tools:targetApi="s">
         <activity
+            android:name=".HomePageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/Theme.GoogleBloom" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">GoogleBloom</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
 </resources>

@@ -1,5 +1,8 @@
 package com.loveyoung.googlebloom.ui
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -11,11 +14,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusState
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.Placeholder
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.loveyoung.googlebloom.HomePageActivity
+import com.loveyoung.googlebloom.LoginActivity
 import com.loveyoung.googlebloom.ui.theme.BloomTheme
 import com.loveyoung.googlebloom.ui.theme.GoogleBloomTheme
 
@@ -141,25 +147,26 @@ fun BottomText() {
 }
 
 @Composable
-fun LoginButton(){
-    Button(onClick = { /*TODO*/ },
-    modifier = Modifier
-        .height(48.dp)
-        .fillMaxWidth()
-        .clip(MaterialTheme.shapes.medium),
-        colors = ButtonDefaults.buttonColors(MaterialTheme.colors.onBackground)) {
-        Text(text = "Log in", style = MaterialTheme.typography.button, color = MaterialTheme.colors.onPrimary)
+fun LoginButton() {
+    val context = LocalContext.current
+    Button(
+        onClick = { goHomePage(context) },
+        modifier = Modifier
+            .height(48.dp)
+            .fillMaxWidth()
+            .clip(MaterialTheme.shapes.medium),
+        colors = ButtonDefaults.buttonColors(MaterialTheme.colors.onBackground)
+    ) {
+        Text(
+            text = "Log in", style = MaterialTheme.typography.button,
+            color = MaterialTheme.colors.onPrimary
+        )
     }
 }
 
-@Preview
-@Composable
-fun LoginPagePreview(){
-    GoogleBloomTheme(
-        theme = if (isSystemInDarkTheme()) BloomTheme.DARK
-        else BloomTheme.LIGHT
-    ) {
-       LoginPage()
-    }
+
+fun goHomePage(act: Context) {
+    val intent = Intent(act, HomePageActivity::class.java)
+    act.startActivity(intent)
 }
 

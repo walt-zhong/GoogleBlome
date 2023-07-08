@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_account_circle.xml" value="0.1" />
         <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_dark_logo.xml" value="0.1" />
         <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_dark_welcome_bg.xml" value="0.1" />
         <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_dark_welcome_illos.xml" value="0.1" />
+        <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_favorite_border.xml" value="0.1" />
+        <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_filter_list.xml" value="0.1" />
+        <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_home.xml" value="0.1" />
         <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_light_logo.xml" value="0.1" />
         <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_light_welcome_bg.xml" value="0.1" />
         <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_light_welcome_illos.xml" value="0.1" />
+        <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_search.xml" value="0.1" />
+        <entry key="..\:/Users/liqy/AndroidStudioProjects/GoogleBloom/app/src/main/res/drawable/ic_shopping_cart.xml" value="0.1" />
       </map>
     </option>
   </component>
